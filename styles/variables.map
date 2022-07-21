@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "variables.css",
+	"sources": [
+		"scss/variables.scss"
+	],
+	"sourcesContent": [
+		"// width\n$mobile: 768px;\n$tablet: 1240px;"
+	],
+	"names": [],
+	"mappings": ""
+}
