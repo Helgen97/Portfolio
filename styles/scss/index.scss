@@ -308,6 +308,20 @@ main {
                 }
             }
         }
+
+        .languages-box {
+            display: flex;
+            width: 50%;
+            margin: .5rem auto;
+            justify-content: space-between;
+            font-weight: 600;
+
+            .language {
+                padding: 1rem;
+                border: 2px $border solid;
+                border-radius: 30px;
+            }
+        }
     }
 
     #contacts {
