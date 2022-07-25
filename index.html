@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dmytro Donchenko</title>
-    <script src="https://use.fontawesome.com/dbe18dda5b.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-    <header>
+    <header id="menu">
         <ul>
             <li>
                 <a href="#about">About me</a>
@@ -35,7 +38,7 @@
         </ul>
     </header>
     <main>
-        <div class="main_block">
+        <div class="main_block" id="main">
             <div>
                 <img src="./img/me.JPG" alt="It's me">
             </div>
@@ -46,7 +49,7 @@
                 </div>
                 <p class="position">Junior/Trainee Java Developer</p>
 
-                <button class="download-btn">Download Resume</button>
+                <button class="download-btn" id="download">Download Resume</button>
             </div>
 
         </div>
@@ -55,7 +58,11 @@
                 <h2>About me</h2>
             </div>
             <div class="text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.</p>
+                <p>I’m looking forward to find my first job as Java Backend Developer and get new experience and
+                    knowledge in that direction!</p>
+                <p>Not so far,I have started learning programming. For that purpose, I have studying at ProgAcademy IT
+                    Course’s in FullStack course.</p>
+                <p>For now, I have learned Java Core, Spring Boot Framework, HTML/CSS and Javascript basics.</p>
             </div>
 
         </div>
@@ -64,33 +71,29 @@
                 <h2>Experience</h2>
             </div>
 
-            <div class="timeline-box last">
-                <div class="timeline-box_date" >
-                    <p>September 2015 – September 2016</p>
-                </div>
-                <div class="timeline-box_mark">
-                    <span class="mark_location"></span>
-                    <span class="mark_line last"></span>
+            <div class="timeline-box">
+                <div class="timeline-box_date">
+                    <p>May 2021 – Now</p>
                 </div>
                 <div class="timeline-box_description">
-                    <h3 class="job_position">Position</h3>
-                    <p class="job_title">Job Title</p>
-                    <p class="job_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.</p>
+                    <h3>Full Stack Student</h3>
+                    <p class="job_title">PROG.ACADEMY</p>
+                    <p>- Learning java basics( Java Core, Java OOP, Spring Framework)</p>
+                    <p>- Learning front end basics( HTML/CSS, Javascript, React.js)</p>
+                    <p>- Creating pet projects</p>
                 </div>
             </div>
 
             <div class="timeline-box">
-                <div class="timeline-box_date" >
-                    <p>September 2015 – September 2016</p>
-                </div>
-                <div class="timeline-box_mark">
-                    <span class="mark_location"></span>
-                    <span class="mark_line"></span>
+                <div class="timeline-box_date">
+                    <p>August 2020 – Now</p>
                 </div>
                 <div class="timeline-box_description">
-                    <h3 class="job_position">Position</h3>
-                    <p class="job_title">Job Title</p>
-                    <p class="job_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.</p>
+                    <h3>Bartender</h3>
+                    <p class="job_title">CHILLOUT HOOKAH-BAR</p>
+                    <p>- Social Skills</p>
+                    <p>- Work in team</p>
+                    <p>- Active listener</p>
                 </div>
             </div>
 
@@ -100,26 +103,170 @@
                 <h2>Education</h2>
             </div>
 
+            <div class="education_box">
+                <a href="https://prog.academy" title="Prog.Academy Site">
+                    <h3>Prog.Academy</h3>
+                </a>
+                <p class="education_degree">
+                    FULL-STACK DEVELOPER
+                </p>
+                <p>
+                    Years of studying: 2021 - now
+                </p>
+            </div>
+
+            <div class="education_box">
+                <h3>Kyiv National University of Trade and Economics</h3>
+                <p class="education_degree">
+                    BACHELOR AND MASTER’S DEGREE IN FOOD INDUSTRY TECHNOLOGY AND ENGINEERING
+                </p>
+                <p>
+                    - Years of studying: 2014 - 2019
+                </p>
+            </div>
+
         </div>
         <div id="projects">
+            <div class="projects_container">
+                <div class="title">
+                    <h2>Latest Projects:</h2>
+                </div>
+                <div class="project_list">
+                    <div class="project_box">
+                        <div class="project_box-title">
+                            <h2>Nice-Forum</h2>
+                        </div>
+                        <div class="project_box-description">
+                            <p>It is the diploma project for final of Full-Stack Developer course.</p>
+                            <p>This is a forum engine. It is a forum where you can post your topics, make comments and
+                                speak with others members of forum.</p>
+                        </div>
+                        <div class="project_box-technology">
+                            <h3>
+                                Technology Stack
+                            </h3>
+                            <div class="technologies">
+                                <span>
+                                    Java/Spring Boot
+                                </span>
+                                <span>
+                                    JavaScript/React.js
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project_box-links">
+                            <h3>Links:</h3>
+                            <a href="https://nice-forum.herokuapp.com" target="_blank">Live Version</a>
+                            <a href="https://github.com/Helgen97/Nice-Forum" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project_box">
+                        <div class="project_box-title">
+                            <h2>Chill-Out Hookah Bar Telegram Bot</h2>
+                        </div>
+                        <div class="project_box-description">
+                            <p>While working as bartender, I create telegram bot for Hookah Bar.</p>
+                            <p>Bot can send latest menu, take reservations for visitors, take feedbacks, and send
+                                contacts.</p>
+                            <p>Unfortunately, for now it didn’t work online in different reasons.</p>
+                        </div>
+                        <div class="project_box-technology">
+                            <h3>
+                                Technology Stack
+                            </h3>
+                            <div class="technologies">
+                                <span>
+                                    Java/Spring Boot
+                                </span>
+                                <span>
+                                    Telegram Bot API
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project_box-links">
+                            <h3>Links:</h3>
+                            <a href="https://github.com/Helgen97/ChillBot" target="_blank">Source Code</a>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
         </div>
         <div id="skills">
-
+            <div class="title">
+                <h2>Skills:</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <h3>Hard Skills:</h3>
+                    <div>
+                        <p class="division">Backend: </p>
+                        <p>Java 8 - 16.</p>
+                        <p>Spring Framework: Boot, IoC, MVC, Data, Security.</p>
+                        <p>JDBC. JPA/Hibernate.</p>
+                        <p>Servlets API. JSP, JSTL, Thymeleaf.</p>
+                        <p>MySQL, PostgreSQL. SQL basics.</p>
+                        <p>Maven 3.</p>
+                        <p>Telegram Bots API.</p>
+                        <p>Git. GitHub. Heroku.</p>
+                        <p class="division">Frontend: </p>
+                        <p>HTML5 / CSS3. Bootstrap 5.</p>
+                        <p>JavaScript ES5/ES6.</p>
+                        <p>jQuery, React, Redux.</p>
+                        <p>Gulp, WebPack.</p>
+                        <p>SASS, LESS, Stylus.</p>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <h3>Soft Skills:</h3>
+                    <div>
+                        <p>Social Skills</p>
+                        <p>Team Player</p>
+                        <p>Openness to feedback</p>
+                        <p>Active listening</p>
+                        <p>Growth mindset</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="contacts">
-
+            <div class="title">
+                <h2>Contacts:</h2>
+            </div>
+            <div class="contacts">
+                <p>Address: <span>Ukraine, Kyiv</span></p>
+                <p>Phone number: <a href="tel:+380939086907">0939086907</a></p>
+                <p>Email: <a href="mailto:dmytro.donchenko97@gmail.com">dmytro.donchenko97@gmail.com</a></p>
+                <p>Telegram: <a href="https://telegram.me/helgen">@helgen</a></p>
+            </div>
         </div>
 
     </main>
-    <!-- <footer>
-        <div class="copyright">
-            Copyright © 2022 Dmytro Donchenko
-        </div>
-        <div class="socials">
 
+    <div class="contacts-box">
+        <div>
+            <a href="mailto:dmytro.donchenko97@gmail.com" target="_blank" class="email" title="Mail Me"></a>
         </div>
-    </footer> -->
+
+        <div>
+            <a href="https://github.com/Helgen97" target="_blank" class="git_hub" title="My GitHub Profile"></a>
+        </div>
+
+        <div>
+            <a href="https://www.linkedin.com/in/dmytrodonchenko/" target="_blank" class="linken_in"
+                title="My LinkedIn"></a>
+        </div>
+
+    </div>
+
+    <button id="top"></button>
+
+    <footer>
+        <h3>
+            &copy; 2022 Dmytro Donchenko
+        </h3>
+    </footer>
+    <script src="./src/jquery-3.6.0.min.js"></script>
     <script src="./src/index.js"></script>
 </body>
 

@@ -2,17 +2,24 @@
 
 html {
     font-size: 18px;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 
 body {
     width: 100%;
-    background: black;
-    color: black;
+    background: $bg-1;
+    color: $text-1;
 }
 
 h2,
 h3 {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
 }
 
 p {
@@ -25,7 +32,7 @@ header {
     top: 0;
     left: 25%;
     margin: 0 auto;
-    color: black;
+    color: $text-1;
     text-align: center;
     font-weight: 700;
 
@@ -35,7 +42,7 @@ header {
         margin: 0;
         list-style: none;
         text-align: center;
-        background-color: white;
+        background-color: $bg-2;
         border-radius: 0 0 30px 30px;
 
         li {
@@ -43,16 +50,13 @@ header {
 
             a {
                 padding: .5rem;
-                text-decoration: none;
-                cursor: pointer;
-                color: black;
-                transition: all .5s linear;
+                color: $text-2;
+                border-radius: 30px;
+                transition: color .5s linear, background-color .5s linear;
 
                 &:hover {
-                    background-color: #eee;
-                    border-radius: 30px;
-                    text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-                    ;
+                    background-color: $bg-1;
+                    color: $text-1;
                 }
             }
         }
@@ -60,8 +64,7 @@ header {
 }
 
 main {
-    margin: 1rem 0;
-    color: white;
+    color: $text-1;
 
     .main_block {
         display: flex;
@@ -79,7 +82,7 @@ main {
         .main_block-text {
             padding: 3rem;
             text-align: center;
-            color: white;
+            color: $text-1;
 
             div {
                 font-size: 2.5rem;
@@ -92,18 +95,20 @@ main {
             .download-btn {
                 margin-top: 1rem;
                 padding: 1rem;
-                color: black;
+                color: $text-1;
                 font-weight: 700;
-                background-color: white;
-                border: 2px white solid;
+                background-color: $bg-1;
+                border: 2px $border solid;
                 border-radius: 30px;
+                box-shadow: 0px -6px 20px 0px rgba(0, 0, 0, 0.75);
+                transition: color .5s linear, border-color .5s linear, box-shadow .5s linear;
                 cursor: pointer;
-                transition: all .5s linear;
             }
 
             .download-btn:hover {
-                text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                color: $hover;
+                border-color: $hover;
+                box-shadow: 0px -6px 10px 0px rgba(0, 0, 0, 0.75);
             }
         }
     }
@@ -111,103 +116,294 @@ main {
     #about {
         display: flex;
         padding: 3rem;
-        border-top: 3px white solid;
-        border-bottom: 3px white solid;
+        border-top: 3px $border solid;
+        border-bottom: 3px $border solid;
 
         .title {
             width: 30%;
             text-align: center;
             align-self: center;
             box-sizing: border-box;
-            border-right: 3px white solid;
+            border-right: 3px $border solid;
         }
 
         .text {
             width: 70%;
             padding: 1.5rem;
             box-sizing: border-box;
+
+            p {
+                margin: 0.2rem 0 0.2rem 0;
+            }
         }
     }
 
     #experience {
         padding: 3rem;
-        border-bottom: 3px white solid;
+        border-bottom: 3px $border solid;
 
         .title {
             text-align: center;
         }
 
         .timeline-box {
+            width: 70%;
+            margin: 1rem auto;
             display: flex;
-            margin: 1rem;
-            margin-bottom: 2rem;
-            justify-content: space-between;
-
-            &.last {
-                margin-top: 4rem;
-            }
 
             .timeline-box_date {
-                padding: 1rem;
-            }
-
-            .timeline-box_mark {
-                width: 50px;
-                height: 50px;
-                position: relative;
-                margin-top: .5rem;
-                border-radius: 50px;
-                background-color: white;
-
-                .mark_location {
-                    display: block;
-                    background: url(../../img/pin.svg) no-repeat;
-                    width: 35px;
-                    height: 35px;
-                    position: relative;
-                    top: 7px;
-                    left: 7px;
-                    z-index: 1;
-                }
-
-                .mark_line {
-                    display: block;
-                    width: 5px;
-                    height: 155px;
-                    position: relative;
-                    background-color: white;
-                    top: -170px;
-                    left: 22px;
-
-                    &.last {
-                        height: 50px;
-                        top: -80px;
-                        box-shadow: 0px -18px 10px 0px rgba(0,0,0,0.75);
-                    }
-                }
+                width: 40%;
+                font-weight: 700;
+                box-sizing: border-box;
+                text-align: center;
+                align-self: center;
             }
 
             .timeline-box_description {
-                width: 60%;
+                width: 70%;
+                margin-left: 2rem;
                 padding: 1rem;
-                color: black;
-                background-color: white;
                 border-radius: 30px;
-
-                .job_position {
-                    font-size: 1.4rem;
-                }
+                border: 3px $border solid;
 
                 .job_title {
-                    margin-bottom: .5rem;
+                    margin: .5rem 0 .5rem 0;
                 }
 
-                .job_description {
-                    font-size: .9rem;
+                ul {
+                    margin: 0;
+                    padding: 0;
                 }
             }
         }
     }
+
+    #education {
+        padding: 3rem;
+        border-bottom: 3px $border solid;
+
+        .title {
+            text-align: center;
+        }
+
+        .education_box {
+            width: 75%;
+            margin: 1rem auto;
+            padding: 1rem;
+            border: 3px $border solid;
+            border-radius: 30px;
+
+            .education_degree {
+                margin: .5rem 0 .5rem 0;
+                font-weight: 600;
+            }
+        }
+    }
+
+    #projects {
+        padding: 3rem;
+        border-bottom: 3px $border solid;
+
+        .projects_container {
+            display: flex;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .title {
+            width: 30%;
+            align-self: center;
+        }
+
+        .project_list {
+            padding: 1rem;
+        }
+
+        .project_box {
+            margin: 0.5rem;
+            padding: 1rem;
+            border: 3px $border solid;
+            border-radius: 30px;
+
+            .project_box-title {
+                text-align: center;
+            }
+
+            .project_box-description {
+                p {
+                    margin: .5rem 0 .5rem 0;
+                }
+            }
+
+            .project_box-technology {
+                text-align: center;
+
+                .technologies {
+                    padding: .5rem;
+                    
+                    span {
+                        display: inline-block;
+                        padding: 0.5rem;
+                        border: 2px $border solid;
+                        border-radius: 30px;
+                    }
+                }
+            }
+
+            .project_box-links {
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                    margin-top: .5rem;
+                    padding: .5rem;
+                    border: 3px $border solid;
+                    border-radius: 30px;
+                    font-weight: 600;
+                    transition: color .5s linear, border-color .5s linear;
+                }
+
+                a:hover {
+                    color: $hover;
+                    border-color: $hover;
+                }
+            }
+        }
+    }
+
+    #skills {
+        padding: 3rem;
+        border-bottom: 3px $border solid;
+
+        .title {
+            text-align: center;
+        }
+
+        .skills-container {
+            display: flex;
+            width: 60%;
+            margin: 0.5rem auto;
+            justify-content: space-between;
+
+            .skill-box {
+                text-align: center;
+                padding: .5rem;
+                
+                div {
+                    margin: 0.5rem;
+                    padding: 1rem;
+                    border: 2px $border solid;
+                    border-radius: 30px;
+
+                    .division {
+                        border: none;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        padding: 0.5rem;
+                        border-bottom: 1px $border solid;
+                    }
+                }
+            }
+        }
+    }
+
+    #contacts {
+        padding: 3rem;
+        border-bottom: 3px $border solid;
+
+        .title {
+            text-align: center;
+        }
+
+        .contacts {
+            width: 30%;
+            margin: .5rem auto;
+            padding: 1rem;
+            border: 3px $border solid;
+            border-radius: 30px;
+            text-align: center;
+
+            p {
+                padding: 0.5rem 0 0.5rem 0;
+                font-size: 1.3rem;
+                font-weight: 600;
+                transition: color .5s linear;
+
+                &:hover {
+                    color: $hover;
+                }
+
+                span, a {
+                    font-weight: 400;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+
+.contacts-box {
+    display: flex;
+    flex-direction: column;
+    padding: .6rem;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    background-color: $bg-1;
+    border: 3px $border solid;
+    border-radius: 25px 0px 0px 25px;
+
+    .email {
+        display: block;
+        background: url(../../img/mail.svg) no-repeat;
+        width: 40px;
+        height: 40px;
+    }
+
+    .git_hub {
+        display: block;
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+        background: url(../../img/github.svg) no-repeat;
+        width: 40px;
+        height: 40px;
+    }
+
+    .linken_in {
+        display: block;
+        background: url(../../img/linkedin.svg) no-repeat;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+#top {
+    display: none;
+    background: url(../../img/top.svg) no-repeat;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    transition: background .2s linear;
+
+    &.show {
+        display: block;
+    }
+
+    &:hover {
+        background: url(../../img/top-hover.svg) no-repeat;
+    }
+}
+
+footer {
+    padding: .5rem;
+    text-align: center;
 }
 
 

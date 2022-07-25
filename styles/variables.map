@@ -5,7 +5,7 @@
 		"scss/variables.scss"
 	],
 	"sourcesContent": [
-		"// width\n$mobile: 768px;\n$tablet: 1240px;"
+		"// width\n$mobile: 768px;\n$tablet: 1240px;\n\n// colors\n\n$text-1: black;\n$text-2: white;\n$bg-1: white;\n$bg-2: black;\n$border: black;\n$hover: blue;"
 	],
 	"names": [],
 	"mappings": ""
