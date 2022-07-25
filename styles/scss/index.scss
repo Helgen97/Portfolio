@@ -358,7 +358,7 @@ main {
 
     .email {
         display: block;
-        background: url(../../img/mail.svg) no-repeat;
+        background: url(../img/mail.svg) no-repeat;
         width: 40px;
         height: 40px;
     }
@@ -367,14 +367,14 @@ main {
         display: block;
         margin-top: .4rem;
         margin-bottom: .4rem;
-        background: url(../../img/github.svg) no-repeat;
+        background: url(../img/github.svg) no-repeat;
         width: 40px;
         height: 40px;
     }
 
     .linken_in {
         display: block;
-        background: url(../../img/linkedin.svg) no-repeat;
+        background: url(../img/linkedin.svg) no-repeat;
         width: 40px;
         height: 40px;
     }
@@ -382,7 +382,7 @@ main {
 
 #top {
     display: none;
-    background: url(../../img/top.svg) no-repeat;
+    background: url(../img/top.svg) no-repeat;
     width: 50px;
     height: 50px;
     border: 0;
@@ -397,7 +397,7 @@ main {
     }
 
     &:hover {
-        background: url(../../img/top-hover.svg) no-repeat;
+        background: url(../img/top-hover.svg) no-repeat;
     }
 }
 
