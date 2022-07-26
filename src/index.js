@@ -24,11 +24,16 @@ $(document).mouseup(function (e) {
   if (e.target.id === "arrow") {
     if(box.hasClass('ride')) {
       box.removeClass("ride");
+      return;
     } 
     box.addClass("ride")
   }
 
   if (e.target.id === "mobile") {
+    if(menu.hasClass("show")) {
+      menu.removeClass("show")
+      return;
+    } 
     menu.addClass("show")
   }
 });
