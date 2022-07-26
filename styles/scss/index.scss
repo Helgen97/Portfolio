@@ -29,12 +29,27 @@ p {
 header {
     width: 50%;
     position: fixed;
-    top: 0;
+    top: 0%;
     left: 25%;
     margin: 0 auto;
     color: $text-1;
     text-align: center;
     font-weight: 700;
+
+    .mobile {
+        display: none;
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: url(../img/mobile.svg) no-repeat;
+        border: 0;
+
+        &:hover {
+            background: url(../img/mobile-active.svg) no-repeat;
+        }
+    }
 
     ul {
         display: inline-block;
@@ -240,7 +255,7 @@ main {
 
                 .technologies {
                     padding: .5rem;
-                    
+
                     span {
                         display: inline-block;
                         padding: 0.5rem;
@@ -288,7 +303,7 @@ main {
             .skill-box {
                 text-align: center;
                 padding: .5rem;
-                
+
                 div {
                     margin: 0.5rem;
                     padding: 1rem;
@@ -350,7 +365,8 @@ main {
                     color: $hover;
                 }
 
-                span, a {
+                span,
+                a {
                     font-weight: 400;
                     font-style: italic;
                 }
@@ -362,13 +378,23 @@ main {
 .contacts-box {
     display: flex;
     flex-direction: column;
-    padding: .6rem;
+    padding: .6rem .2rem;
     position: fixed;
     top: 30%;
     right: 0;
     background-color: $bg-1;
     border: 3px $border solid;
     border-radius: 25px 0px 0px 25px;
+
+    .arrow {
+        display: none;
+        background: url(../img/left.svg) no-repeat;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        right: 4%;
+        border: 0;
+    }
 
     .email {
         display: block;
@@ -420,7 +446,287 @@ footer {
     text-align: center;
 }
 
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
 
-@media screen and (max-width: $mobile) {}
+    header {
+        width: 100%;
+        left: 0;
+    }
 
-@media screen and (min-width: $mobile) and (max-width: $tablet) {}
+    main {
+        .main_block {
+            width: 90%;
+        }
+
+        #about {
+            width: 90%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        #experience {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .timeline-box {
+                width: 85%;
+            }
+        }
+
+        #education {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .education_box {
+                width: 80%;
+            }
+        }
+
+        #projects {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .projects_container {
+                display: block;
+                width: 90%;
+
+                .title {
+                    width: 100%;
+                    text-align: center;
+                    align-self: auto;
+                }
+            }
+        }
+
+        #skills {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .skills-container {
+                display: block;
+                width: 80%;
+            }
+
+            .languages-box {
+                width: 80%;
+            }
+        }
+
+        #contacts {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .contacts {
+                width: 50%;
+            }
+        }
+    }
+
+    #top {
+        right: 1%;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+
+    header {
+        margin: 0;
+        top: 6%;
+        left: 55%;
+        z-index: 1;
+
+        .mobile {
+            display: block;
+        }
+
+        ul {
+            display: none;
+            padding: .5rem 0;
+            border-radius: 30px 0 0 30px;
+            transition: display 0.5s linear;
+
+            li {
+                display: block;
+                margin: 0.5rem 0;
+                padding: .5rem 0;
+            }
+
+            &.show {
+                display: block;
+            }
+        }
+
+
+    }
+
+    main {
+
+        .main_block {
+            display: block;
+            width: 100%;
+            margin: 0;
+
+            .main_block-text {
+                padding: 1.2rem;
+
+                div {
+                    font-size: 2rem;
+                }
+
+                .position {
+                    font-size: 1.5rem;
+                }
+
+                .download-btn {
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+
+        #about {
+            display: block;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            text-align: center;
+
+            .title {
+                width: 100%;
+                border-right: none;
+            }
+
+            .text {
+                width: 100%;
+                padding: 0;
+
+                p {
+                    margin: 0.5rem 0 0.5rem 0;
+                }
+            }
+        }
+
+        #experience {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .timeline-box {
+                display: block;
+                width: 100%;
+
+                .timeline-box_date {
+                    width: 100%;
+                    margin-bottom: .5rem;
+                }
+
+                .timeline-box_description {
+                    width: 90%;
+                    margin: 0 auto;
+
+                }
+            }
+        }
+
+        #education {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .education_box {
+                width: 90%;
+            }
+        }
+
+        #projects {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .projects_container {
+                display: block;
+                width: 100%;
+
+                .title {
+                    width: 100%;
+                    text-align: center;
+                    align-self: auto;
+                }
+
+                .project_box:not(:first-child) {
+                    margin-top: 1rem;
+                }
+
+                .project_box-technology {
+
+                    .technologies {
+
+                        span {
+                            margin-top: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        #skills {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .skills-container {
+                width: 100%;
+                display: block;
+            }
+
+            .languages-box {
+                flex-direction: column;
+
+                .language {
+                    margin-top: .5rem;
+                }
+            }
+        }
+
+        #contacts {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            .contacts {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .contacts-box {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        right: -35%;
+        transition: right .5s linear;
+
+        .arrow {
+            display: block;
+        }
+
+        div {
+            margin: 0;
+        }
+
+        .git_hub {
+            margin-left: .2rem;
+            margin-right: .2rem;
+        }
+
+        &.ride {
+            right: 0;
+        }
+    }
+
+    #top {
+        width: 40px;
+        height: 40px;
+        bottom: 1%;
+        right: 1%;
+        background: url(../img/top-small.svg) no-repeat;
+
+        &:hover {
+            background: url(../img/top-small-active.svg) no-repeat;
+        }
+    }
+}
