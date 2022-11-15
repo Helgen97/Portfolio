@@ -1,8 +1,8 @@
 @import 'variables.scss';
 
 html {
-    font-size: 18px;
-    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -67,7 +67,7 @@ header {
                 padding: .5rem;
                 color: $text-2;
                 border-radius: 30px;
-                transition: color .5s linear, background-color .5s linear;
+                transition: color .3s linear, background-color .3s linear;
 
                 &:hover {
                     background-color: $bg-1;
