@@ -1,0 +1,103 @@
+/**
+*   header.scss
+*
+*   Contains styles for header component and inner elements of it. With adaptive for devices.
+*
+**/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(2.5 * #{$gap}) calc(4 * #{$gap}); // Calculates paddings like other page with grids
+  background-color: $block-background-color;
+}
+
+.header_logo {
+  color: $heading-color;
+  font-family: $monospace-font;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: none; //hide desktop menu by default
+}
+
+/**
+  Style for all menu links
+**/
+.menu_link {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: color 0.3s linear;
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}
+
+/** 
+  Style for mobile menu.
+**/
+.mobile_menu_content {
+  width: 100%;
+  position: fixed;
+  top: calc(8 * #{$gap});
+  right: -100%;
+  padding: 0.5rem 0;
+  background-color: $block-background-color;
+  text-align: center;
+  transition: right 0.5s linear;
+
+  &.showed {
+    //With this class it rolled to screen
+    right: 0;
+  }
+
+  li {
+    padding: 0.5rem;
+
+    a {
+      width: 100%;
+      padding: 0.5rem 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  header {
+    padding: calc(2.5 * #{$gap}) calc(8 * #{$gap});
+  }
+
+  .mobile_menu_content {
+    li {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  header {
+    padding: calc(2.5 * #{$gap}) calc(20 * #{$gap});
+  }
+
+  .menu {
+    display: block; // Shows menu at desktops devices
+
+    ul {
+      display: flex;
+    }
+
+    .menu_link {
+      padding-left: calc(3 * #{$gap});
+    }
+  }
+
+  .mobile_menu {
+    display: none; // Hides mobile block at desktop devices
+  }
+}

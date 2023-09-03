@@ -1,733 +1,94 @@
-@import 'variables.scss';
+/**
+* index.scss
+* 
+* Contains imports of all style-files and styles for main selectors.
+**/
+
+@import "vars.scss";
+@import "grids.scss";
+@import "header.scss";
+@import "main_section.scss";
+@import "about.scss";
+@import "experience.scss";
+@import "education.scss";
+@import "skills.scss";
+@import "projects.scss";
+@import "contacts.scss";
+@import "footer.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+  font-family: $serif-font;
+  font-size: $font-size;
+  color: $content-color;
 }
 
-body {
-    width: 100%;
-    background: $bg-1;
-    color: $text-1;
+ul {
+  list-style: none;
 }
 
-h2,
-h3 {
-    margin: 0;
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
-p {
-    margin: 0;
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  color: $heading-color;
+  font-family: $monospace-font;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-header {
-    width: 50%;
-    position: fixed;
-    top: 0%;
-    left: 25%;
-    margin: 0 auto;
-    color: $text-1;
-    text-align: center;
-    font-weight: 700;
-
-    .mobile {
-        display: none;
-        width: 50px;
-        height: 50px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background: url(../img/mobile.svg) no-repeat;
-        border: 0;
-
-        &:hover {
-            background: url(../img/mobile-active.svg) no-repeat;
-        }
-    }
-
-    ul {
-        display: inline-block;
-        padding: 1rem;
-        margin: 0;
-        list-style: none;
-        text-align: center;
-        background-color: $bg-2;
-        border-radius: 0 0 30px 30px;
-
-        li {
-            display: inline-block;
-
-            a {
-                padding: .5rem;
-                color: $text-2;
-                border-radius: 30px;
-                transition: color .3s linear, background-color .3s linear;
-
-                &:hover {
-                    background-color: $bg-1;
-                    color: $text-1;
-                }
-            }
-        }
-    }
+h1 {
+  font-size: 1.375rem;
 }
 
-main {
-    color: $text-1;
-
-    .main_block {
-        display: flex;
-        width: 75%;
-        margin: 0 auto;
-        padding: 4rem 0;
-        text-align: center;
-
-        img {
-            max-width: 100%;
-            max-height: 400px;
-            border-radius: 30px;
-            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        }
-
-        .main_block-text {
-            padding: 3rem;
-            text-align: center;
-            color: $text-1;
-
-            div {
-                font-size: 2.5rem;
-            }
-
-            .position {
-                font-size: 2rem;
-            }
-
-            .download-btn {
-                margin-top: 1rem;
-                padding: 1rem;
-                color: $text-1;
-                font-weight: 700;
-                background-color: $bg-1;
-                border: 2px $border solid;
-                border-radius: 30px;
-                box-shadow: 0px -6px 20px 0px rgba(0, 0, 0, 0.75);
-                transition: color .5s linear, border-color .5s linear, box-shadow .5s linear;
-                cursor: pointer;
-            }
-
-            .download-btn:hover {
-                color: $hover;
-                border-color: $hover;
-                box-shadow: 0px -6px 10px 0px rgba(0, 0, 0, 0.75);
-            }
-        }
-    }
-
-    #about {
-        display: flex;
-        padding: 3rem;
-        border-top: 3px $border solid;
-        border-bottom: 3px $border solid;
-
-        .title {
-            width: 30%;
-            text-align: center;
-            align-self: center;
-            box-sizing: border-box;
-            border-right: 3px $border solid;
-        }
-
-        .text {
-            width: 70%;
-            padding: 1.5rem;
-            box-sizing: border-box;
-
-            p {
-                margin: 0.2rem 0 0.2rem 0;
-            }
-        }
-    }
-
-    #experience {
-        padding: 3rem;
-        border-bottom: 3px $border solid;
-
-        .title {
-            text-align: center;
-        }
-
-        .timeline-box {
-            width: 70%;
-            margin: 1rem auto;
-            display: flex;
-
-            .timeline-box_date {
-                width: 40%;
-                font-weight: 700;
-                box-sizing: border-box;
-                text-align: center;
-                align-self: center;
-            }
-
-            .timeline-box_description {
-                width: 70%;
-                margin-left: 2rem;
-                padding: 1rem;
-                border-radius: 30px;
-                border: 3px $border solid;
-
-                .job_title {
-                    margin: .5rem 0 .5rem 0;
-                }
-
-                ul {
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-        }
-    }
-
-    #education {
-        padding: 3rem;
-        border-bottom: 3px $border solid;
-
-        .title {
-            text-align: center;
-        }
-
-        .education_box {
-            width: 75%;
-            margin: 1rem auto;
-            padding: 1rem;
-            border: 3px $border solid;
-            border-radius: 30px;
-
-            .education_degree {
-                margin: .5rem 0 .5rem 0;
-                font-weight: 600;
-            }
-        }
-    }
-
-    #projects {
-        padding: 3rem;
-        border-bottom: 3px $border solid;
-
-        .projects_container {
-            display: flex;
-            width: 75%;
-            margin: 0 auto;
-        }
-
-        .title {
-            width: 30%;
-            align-self: center;
-        }
-
-        .project_list {
-            padding: 1rem;
-        }
-
-        .project_box {
-            margin: 0.5rem;
-            padding: 1rem;
-            border: 3px $border solid;
-            border-radius: 30px;
-
-            .project_box-title {
-                text-align: center;
-            }
-
-            .project_box-description {
-                p {
-                    margin: .5rem 0 .5rem 0;
-                }
-            }
-
-            .project_box-technology {
-                text-align: center;
-
-                .technologies {
-                    padding: .5rem;
-
-                    span {
-                        display: inline-block;
-                        padding: 0.5rem;
-                        border: 2px $border solid;
-                        border-radius: 30px;
-                    }
-                }
-            }
-
-            .project_box-links {
-                text-align: center;
-
-                a {
-                    display: inline-block;
-                    margin-top: .5rem;
-                    padding: .5rem;
-                    border: 3px $border solid;
-                    border-radius: 30px;
-                    font-weight: 600;
-                    transition: color .5s linear, border-color .5s linear;
-                }
-
-                a:hover {
-                    color: $hover;
-                    border-color: $hover;
-                }
-            }
-        }
-    }
-
-    #skills {
-        padding: 3rem;
-        border-bottom: 3px $border solid;
-
-        .title {
-            text-align: center;
-        }
-
-        .skills-container {
-            display: flex;
-            width: 60%;
-            margin: 0.5rem auto;
-            justify-content: space-between;
-
-            .skill-box {
-                text-align: center;
-                padding: .5rem;
-
-                div {
-                    margin: 0.5rem;
-                    padding: 1rem;
-                    border: 2px $border solid;
-                    border-radius: 30px;
-
-                    .division {
-                        border: none;
-                        font-size: 1.2rem;
-                        font-weight: 600;
-                    }
-
-                    p {
-                        padding: 0.5rem;
-                        border-bottom: 1px $border solid;
-                    }
-                }
-            }
-        }
-
-        .languages-box {
-            display: flex;
-            width: 50%;
-            margin: .5rem auto;
-            justify-content: space-between;
-            font-weight: 600;
-
-            .language {
-                padding: 1rem;
-                border: 2px $border solid;
-                border-radius: 30px;
-            }
-        }
-    }
-
-    #contacts {
-        padding: 3rem;
-        border-bottom: 3px $border solid;
-
-        .title {
-            text-align: center;
-        }
-
-        .contacts {
-            width: 30%;
-            margin: .5rem auto;
-            padding: 1rem;
-            border: 3px $border solid;
-            border-radius: 30px;
-            text-align: center;
-
-            p {
-                padding: 0.5rem 0 0.5rem 0;
-                font-size: 1.3rem;
-                font-weight: 600;
-                transition: color .5s linear;
-
-                &:hover {
-                    color: $hover;
-                }
-
-                span,
-                a {
-                    font-weight: 400;
-                    font-style: italic;
-                }
-            }
-        }
-    }
+h2 {
+  font-size: 1.25rem;
 }
 
-.contacts-box {
-    display: flex;
-    flex-direction: column;
-    padding: .6rem .2rem;
-    position: fixed;
-    top: 30%;
-    right: 0;
-    background-color: $bg-1;
-    border: 3px $border solid;
-    border-radius: 25px 0px 0px 25px;
+@media screen and (min-width: $tablet) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 7px;
+  }
 
-    .arrow {
-        display: none;
-        background: url(../img/left.svg) no-repeat;
-        width: 40px;
-        height: 40px;
-        position: relative;
-        right: 4%;
-        border: 0;
-    }
-
-    .email {
-        display: block;
-        background: url(../img/mail.svg) no-repeat;
-        width: 40px;
-        height: 40px;
-    }
-
-    .git_hub {
-        display: block;
-        margin-top: .4rem;
-        margin-bottom: .4rem;
-        background: url(../img/github.svg) no-repeat;
-        width: 40px;
-        height: 40px;
-    }
-
-    .linken_in {
-        display: block;
-        background: url(../img/linkedin.svg) no-repeat;
-        width: 40px;
-        height: 40px;
-    }
+  h2 {
+    font-size: 1.75rem;
+    letter-spacing: 5px;
+  }
 }
 
-#top {
-    display: none;
-    background: url(../img/top.svg) no-repeat;
-    width: 50px;
-    height: 50px;
-    border: 0;
-    border-radius: 30px;
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    transition: background .2s linear;
-
-    &.show {
-        display: block;
-    }
-
-    &:hover {
-        background: url(../img/top-hover.svg) no-repeat;
-    }
-}
-
-footer {
-    padding: .5rem;
-    text-align: center;
-}
-
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-
-    header {
-        width: 100%;
-        left: 0;
-    }
-
-    main {
-        .main_block {
-            width: 90%;
-        }
-
-        #about {
-            width: 90%;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        #experience {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .timeline-box {
-                width: 85%;
-            }
-        }
-
-        #education {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .education_box {
-                width: 80%;
-            }
-        }
-
-        #projects {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .projects_container {
-                display: block;
-                width: 90%;
-
-                .title {
-                    width: 100%;
-                    text-align: center;
-                    align-self: auto;
-                }
-            }
-        }
-
-        #skills {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .skills-container {
-                display: block;
-                width: 80%;
-            }
-
-            .languages-box {
-                width: 80%;
-            }
-        }
-
-        #contacts {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .contacts {
-                width: 50%;
-            }
-        }
-    }
-
-    #top {
-        right: 1%;
-    }
-}
-
-@media screen and (max-width: $mobile) {
-
-    header {
-        margin: 0;
-        top: 6%;
-        left: 55%;
-        z-index: 1;
-
-        .mobile {
-            display: block;
-        }
-
-        ul {
-            display: none;
-            padding: .5rem 0;
-            border-radius: 30px 0 0 30px;
-            transition: display 0.5s linear;
-
-            li {
-                display: block;
-                margin: 0.5rem 0;
-                padding: .5rem 0;
-            }
-
-            &.show {
-                display: block;
-            }
-        }
-
-
-    }
-
-    main {
-
-        .main_block {
-            display: block;
-            width: 100%;
-            margin: 0;
-
-            .main_block-text {
-                padding: 1.2rem;
-
-                div {
-                    font-size: 2rem;
-                }
-
-                .position {
-                    font-size: 1.5rem;
-                }
-
-                .download-btn {
-                    margin-top: 1.5rem;
-                }
-            }
-        }
-
-        #about {
-            display: block;
-            padding-right: 1rem;
-            padding-left: 1rem;
-            text-align: center;
-
-            .title {
-                width: 100%;
-                border-right: none;
-            }
-
-            .text {
-                width: 100%;
-                padding: 0;
-
-                p {
-                    margin: 0.5rem 0 0.5rem 0;
-                }
-            }
-        }
-
-        #experience {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .timeline-box {
-                display: block;
-                width: 100%;
-
-                .timeline-box_date {
-                    width: 100%;
-                    margin-bottom: .5rem;
-                }
-
-                .timeline-box_description {
-                    width: 90%;
-                    margin: 0 auto;
-
-                }
-            }
-        }
-
-        #education {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .education_box {
-                width: 90%;
-            }
-        }
-
-        #projects {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .projects_container {
-                display: block;
-                width: 100%;
-
-                .title {
-                    width: 100%;
-                    text-align: center;
-                    align-self: auto;
-                }
-
-                .project_box:not(:first-child) {
-                    margin-top: 1rem;
-                }
-
-                .project_box-technology {
-
-                    .technologies {
-
-                        span {
-                            margin-top: .5rem;
-                        }
-                    }
-                }
-            }
-        }
-
-        #skills {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .skills-container {
-                width: 100%;
-                display: block;
-            }
-
-            .languages-box {
-                flex-direction: column;
-
-                .language {
-                    margin-top: .5rem;
-                }
-            }
-        }
-
-        #contacts {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            .contacts {
-                width: 100%;
-                box-sizing: border-box;
-            }
-        }
-    }
-
-    .contacts-box {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        right: -35%;
-        transition: right .5s linear;
-
-        .arrow {
-            display: block;
-        }
-
-        div {
-            margin: 0;
-        }
-
-        .git_hub {
-            margin-left: .2rem;
-            margin-right: .2rem;
-        }
-
-        &.ride {
-            right: 0;
-        }
-    }
-
-    #top {
-        width: 40px;
-        height: 40px;
-        bottom: 1%;
-        right: 1%;
-        background: url(../img/top-small.svg) no-repeat;
-
-        &:hover {
-            background: url(../img/top-small-active.svg) no-repeat;
-        }
-    }
+@media screen and (min-width: $desktop) {
+  h1 {
+    font-size: 2.75rem;
+    letter-spacing: 7px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: 7px;
+  }
 }

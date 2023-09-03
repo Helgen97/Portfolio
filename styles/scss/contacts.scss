@@ -1,0 +1,61 @@
+/**
+* contacts.scss
+* 
+* Contains styles of 'Contact' section of project.
+**/
+
+.contacts_section {
+
+  .contact-box {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .contact-box__container:not(:first-child) {
+    margin-top: $gap;
+  }
+
+  .contact-box__label {
+    display: inline-block;
+    color: $hover-color;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .contact-box__content {
+    display: inline-block;
+    margin-left: $gap;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .contacts_section {
+    .content_title {
+      grid-area: 1 / 1 / 2 / 4;
+    }
+
+    .content {
+      grid-area: 1 / 2 / 2 / 12;
+    }
+
+    .base_grid_left_background {
+      display: none;
+    }
+
+    .base_grid_right_background {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .contacts_section {
+    .content_title {
+      grid-area: 1 / 2 / 2 / 4;
+    }
+
+    .content {
+      grid-area: 1 / 4 / 2 / 10;
+    }
+  }
+}

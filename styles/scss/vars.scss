@@ -1,0 +1,30 @@
+/**
+* vars.scss
+* 
+* Contains variables of project.
+**/
+
+// Font connection 
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Roboto+Mono:wght@700&display=swap');
+
+// Responsive breakpoints for devices
+$phone: 320px;
+$tablet: 743px;
+$desktop: 1439px;
+
+// Colors
+$content-color: white;
+$block-background-color: #00798C;
+$hover-color: #EDAE49;
+$block-title-color: #D1495B;
+$heading-color: #003D5B;
+
+// Fonts 
+$serif-font: "Crimson Text", serif;
+$monospace-font: 'Roboto Mono', monospace;
+
+// Font size
+$font-size: 16px;
+
+//Gap width
+$gap: 10px;

@@ -1,0 +1,72 @@
+/**
+* skills.scss
+* 
+* Contains styles for 'Skills' section of project.
+**/
+
+.skills_section {
+  .skills_group {
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-top: calc(2 * #{$gap});
+    }
+  }
+
+  .skills_group__title {
+    color: $hover-color;
+    letter-spacing: 2px;
+  }
+
+  .skills_group__list-container__title {
+    text-transform: uppercase;
+  }
+
+  .skills_group__list-container__title {
+    margin: $gap 0;
+  }
+
+  .skills_group__list-container__item {
+    margin-top: calc(#{$gap} / 2);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .skills_section {
+    .content_title {
+      grid-area: 1 / 10 / 2 / 13;
+    }
+
+    .content {
+      grid-area: 1 / 2 / 2 / 12;
+    }
+
+    .base_grid_left_background {
+      display: none;
+    }
+
+    .base_grid_right_background {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .skills_section {
+    .content_title {
+      grid-area: 1 / 10 / 2 / 12;
+    }
+
+    .skills_group:first-child {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .skills_group__title {
+      width: 100%;
+      font-size: calc(#{$font-size} * 1.3);
+    }
+
+  }
+}

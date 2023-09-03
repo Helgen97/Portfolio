@@ -1,0 +1,102 @@
+/**
+*     main_section.scss
+*
+*   Contains styles for main section of project. With adaptive for devices.
+*
+*
+**/
+
+
+.main_section {
+  text-align: center;
+
+  /**
+    For main section disable grid. Working with blocks
+  **/
+  .content_grid_container {
+    display: block;
+  }
+
+  .main_header_container {
+    margin-bottom: calc(2 * #{$gap});
+  }
+
+  .cv_image {
+    width: 170px;
+    height: 170px;
+  }
+
+  .additional_header_container {
+    margin: calc(2 * #{$gap}) 0;
+  }
+
+  /*
+    Styling CV Download button
+  */
+  .download-btn {
+    display: inline-block;
+    padding: calc(1.2 * #{$font-size}) calc(3 * #{$font-size});
+    border-radius: calc((2 * (1.2 * #{$font-size}) + #{$font-size}) / 2);
+    background: $hover-color;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+    font-weight: 700;
+    transition: box-shadow 0.5s linear;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .main_section {
+
+    .content_grid_container {
+      /*
+      For tablet and desktop devices using flex to arrange content in other order
+      */
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    } 
+    .main_header_container {
+      width: 100%;
+      order: 1;
+    }
+
+    .cv_image_container {
+      order: 2;
+    }
+
+    .cv_image {
+      width: 200px;
+      height: 200px;
+    }
+
+    .additional_header_container {
+      width: 100%;
+      margin-bottom: 0;
+      order: 4;
+    }
+
+    .download-btn-container {
+      order: 3;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .main_section {
+    .cv_image {
+      width: 325px;
+      height: 325px;
+    }
+
+    .additional_header_container {
+      margin-bottom: 0;
+    }
+  }
+}

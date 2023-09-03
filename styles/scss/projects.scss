@@ -1,0 +1,88 @@
+/**
+* projects.scss
+* 
+* Contains styles of 'Project' section of project.
+**/
+
+.projects_section {
+  .project-box {
+    &:not(:first-child) {
+      margin-top: calc(2 * #{$gap});
+    }
+
+    &:not(:last-child) {
+      padding-bottom: calc(2 * #{$gap});
+      border-bottom: 2px solid $hover-color;
+    }
+  }
+
+  .project-box__title {
+    text-align: center;
+    font-family: $monospace-font;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .project-box__description {
+    margin-top: $gap;
+  }
+
+  .project-box__technologies {
+    margin-top: $gap;
+    font-weight: 700;
+    text-align: center;
+
+    .desc {
+      color: $hover-color;
+    }
+  }
+
+  .project-box__links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: $gap;
+  }
+
+  .project-box__link {
+    display: inline-block;
+    color: $hover-color;
+    text-decoration-line: underline;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .projects_section {
+    .content_title {
+      grid-area: 1 / 5 / 2 / 8;
+    }
+
+    .content {
+      grid-area: 1 / 1 / 2 / 11;
+    }
+
+    .base_grid_right_background {
+      display: none;
+    }
+
+    .project-box {
+      margin-right: calc(8 * #{$gap});
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .projects_section {
+    .content_title {
+      grid-area: 1 / 5 / 2 / 7;
+    }
+
+    .content {
+      grid-area: 1 / 1 / 2 / 9;
+    }
+
+    .project-box {
+      margin-right: calc(20 * #{$gap});
+    }
+  }
+}

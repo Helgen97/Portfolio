@@ -1,0 +1,117 @@
+/**
+* education.scss
+* 
+* Contains styles of 'Education' section of project.
+**/
+
+.education_section {
+  .education_block:not(:first-child) {
+    margin-top: calc(2 * #{$gap});
+  }
+
+  .education_block__content-header {
+    font-family: $monospace-font;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: $gap;
+    border-bottom: 1px solid $hover-color;
+  }
+
+  .education_block__header-paragraph:last-child {
+    margin-top: $gap;
+  }
+
+  .education_block__content-dates {
+    margin-top: $gap;
+  }
+
+  .education_block___dates-paragraph:last-child {
+    text-align: right;
+  }
+
+  .education_block__link-container {
+    margin-top: $gap;
+    text-align: center;
+  }
+
+  .education_block__link {
+    color: $hover-color;
+    font-size: calc(1.2 * #{$font-size});
+    text-decoration-line: underline;
+  }
+
+  .education_block__link:first-child {
+    margin-right: calc(2 * #{$gap});
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .education_section {
+    .content_title {
+      grid-area: 1 / 6 / 2 / 9;
+    }
+
+    .content {
+      grid-area: 1 / 3 / 2 / 13;
+    }
+
+    .base_grid_left_background {
+      display: none;
+    }
+
+    .education_block {
+      width: fit-content;
+      padding: 0 calc(2 * #{$gap});
+    }
+
+    .education_block__content-header {
+      display: flex;
+      padding-bottom: 0;
+      border: 0;
+    }
+
+    .education_block__header-paragraph {
+      display: inline-block;
+    }
+
+    .education_block__header-paragraph:last-child {
+      margin-top: 0;
+      margin-left: $gap;
+      padding-left: $gap;
+      border-left: 1px solid $hover-color;
+    }
+
+    .education_block___dates-paragraph {
+      display: inline-block;
+    }
+
+    .education_block___dates-paragraph:last-child {
+      padding-left: $gap;
+      text-align: start;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .education_section {
+    .content_title {
+      grid-area: 1 / 6 / 2 / 8;
+    }
+
+    .content {
+      grid-area: 1 / 2 / 2 / 13;
+    }
+
+    .education_block {
+      display: flex;
+      align-items: center;
+      padding: 0 calc(5 * #{$gap});
+    }
+
+    .education_block__link-container {
+      margin-top: 0;
+      margin-left: calc(5 * #{$gap});
+    }
+  }
+}

@@ -1,0 +1,99 @@
+/**
+* experience.scss
+* 
+* Contains styles of 'experience' section of project. With adaptive for devices.
+**/
+
+.experience_section {
+  .experience_block:not(:first-child) {
+    margin-top: calc(2.5 * #{$gap});
+  }
+
+  .experience_header {
+    padding-bottom: $gap;
+    border-bottom: 1px solid $hover-color;
+  }
+
+  .experience_header__paragraph {
+    font-family: $monospace-font;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:not(:first-child) {
+      margin-top: $gap;
+    }
+  }
+
+  .experience_content {
+    margin-top: $gap;
+  }
+
+  .experience_content__item {
+    font-family: $serif-font;
+    font-size: $font-size;
+
+    &:not(:first-child) {
+      margin-top: calc(#{$gap} / 2);
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .experience_section {
+    .content_title {
+      grid-area: 1 / 2 / 2 / 5;
+    }
+
+    .content {
+      grid-area: 1 / 2 / 2 / 12;
+    }
+
+    .base_grid_left_background {
+      display: none;
+    }
+
+    .base_grid_right_background {
+      display: none;
+    }
+
+    .experience_block {
+      padding: 0 calc(2.5 * #{$gap});
+    }
+
+    .experience_header {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .experience_content {
+      width: fit-content;
+      margin: $gap auto 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .experience_section {
+    .content_title {
+      grid-area: 1 / 2 / 2 / 4;
+    }
+
+    .experience_block {
+      display: flex;
+    }
+
+    .experience_header {
+      width: 250px;
+      margin: 0;
+      padding-bottom: 0;
+      padding-right: $gap;
+      border-right: 1px solid $hover-color;
+      border-bottom: 0;
+    }
+
+    .experience_content {
+      margin: 0;
+      padding-left: $gap;
+    }
+  }
+}

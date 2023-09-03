@@ -1,0 +1,50 @@
+/**
+* about.scss
+*   
+*   Contains style for 'About' section of project. With adaptive for devices.
+*
+**/
+
+.about_section {
+
+  .paragraph_block:not(:first-child) {
+    margin-top: calc(2 * #{$gap});
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .about_section {
+
+    .content_container_background {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .content_title {
+      grid-area: 1 / 9 / 2 / 12;
+    }
+
+    .content {
+      grid-area: 1 / 1 / 2 / 9;
+    }
+
+    .base_grid_right_background {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .about_section {
+    .paragraph_block {
+      padding-right: $gap;
+    }
+
+    .content_title {
+      grid-area: 1 / 10 / 2 / 12;
+    }
+
+    .content {
+      grid-area: 1 / 1 / 2 / 9;
+    }
+  }
+}

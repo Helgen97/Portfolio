@@ -1,0 +1,30 @@
+/**
+* footer.scss
+* 
+* Contains styles for footer sections of project.
+**/
+
+footer {
+  margin-top: calc(5.5 * #{$gap});
+  padding: calc(2.5 * #{$gap}) calc(4 * #{$gap}); // Calculates paddings like other page with grids
+  text-align: center;
+  background-color: $block-background-color;
+
+  .footer_logo {
+    font-family: $monospace-font;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  footer {
+    padding: calc(2.5 * #{$gap}) calc(8 * #{$gap});
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  footer {
+    padding: calc(2.5 * #{$gap}) calc(20 * #{$gap});
+  }
+}
