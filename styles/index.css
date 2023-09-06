@@ -100,12 +100,29 @@ header {
   background-color: #00798C; }
 
 .header_logo {
-  color: #003D5B;
   font-family: "Roboto Mono", monospace;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase; }
 
+.logo_animation {
+  background: linear-gradient(90deg, #003d5b 0%, #30638e 50%, #edae49 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: wave 5s ease-in-out infinite alternate; }
+
+@keyframes wave {
+  from {
+    background-position: 0% 50%; }
+  to {
+    background-position: 100% 50%; } }
+@-webkit-keyframes wave {
+  from {
+    background-position: 0% 50%; }
+  to {
+    background-position: 100% 50%; } }
 .menu {
   display: none; }
 
@@ -125,9 +142,10 @@ header {
   Style for mobile menu.
 **/
 .mobile_menu_content {
-  width: 100%;
+  width: 50%;
+  height: 100%;
   position: fixed;
-  top: calc(8 * 10px);
+  top: 0;
   right: -100%;
   padding: 0.5rem 0;
   background-color: #00798C;
@@ -135,18 +153,29 @@ header {
   transition: right 0.5s linear; }
   .mobile_menu_content.showed {
     right: 0; }
-  .mobile_menu_content li {
-    padding: 0.5rem; }
-    .mobile_menu_content li a {
-      width: 100%;
-      padding: 0.5rem 2rem; }
+  .mobile_menu_content ul {
+    margin-top: calc((2.5 * 10px)); }
+    .mobile_menu_content ul .mobile_menu_close-svg {
+      width: 1.1rem;
+      height: 1.1rem; }
+    .mobile_menu_content ul li {
+      padding: 0.5rem; }
+      .mobile_menu_content ul li:first-child {
+        padding: 0; }
+      .mobile_menu_content ul li a {
+        width: 100%;
+        padding: 0.5rem 2rem; }
 
 @media screen and (min-width: 743px) {
   header {
     padding: calc(2.5 * 10px) calc(8 * 10px); }
 
-  .mobile_menu_content li {
-    padding: 0; } }
+  .header_logo {
+    font-size: 1.3rem; }
+
+  .mobile_menu_content ul .mobile_menu_close-svg {
+    width: 1.5rem;
+    height: 1.5rem; } }
 @media screen and (min-width: 1439px) {
   header {
     padding: calc(2.5 * 10px) calc(20 * 10px); }
@@ -575,3 +604,5 @@ h2 {
   h2 {
     font-size: 2.5rem;
     letter-spacing: 7px; } }
+
+/*# sourceMappingURL=index.css.map */
