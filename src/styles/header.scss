@@ -14,11 +14,42 @@ header {
 }
 
 .header_logo {
-  color: $heading-color;
   font-family: $monospace-font;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.logo_animation {
+  background: linear-gradient(
+    90deg,
+    $heading-color 0%,
+    $block-background-color 50%,
+    $hover-color 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: wave 5s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@-webkit-keyframes wave {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
 }
 
 .menu {
@@ -44,26 +75,40 @@ header {
   Style for mobile menu.
 **/
 .mobile_menu_content {
-  width: 100%;
+  width: 50%;
+  height: 100%;
   position: fixed;
-  top: calc(8 * #{$gap});
+  top: 0;
   right: -100%;
   padding: 0.5rem 0;
   background-color: $block-background-color;
   text-align: center;
-  transition: right 0.5s linear;
+  transition: right 0.4s linear;
 
   &.showed {
     //With this class it rolled to screen
     right: 0;
   }
 
-  li {
-    padding: 0.5rem;
+  ul {
+    margin-top: calc((2.5 * #{$gap}));
 
-    a {
-      width: 100%;
-      padding: 0.5rem 2rem;
+    .mobile_menu_close-svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    li {
+      padding: 0.5rem;
+
+      &:first-child {
+        padding: 0;
+      }
+
+      a {
+        width: 100%;
+        padding: 0.5rem 2rem;
+      }
     }
   }
 }
@@ -73,9 +118,18 @@ header {
     padding: calc(2.5 * #{$gap}) calc(8 * #{$gap});
   }
 
+  .header_logo {
+    font-size: 1.3rem;
+  }
+
   .mobile_menu_content {
-    li {
-      padding: 0;
+    width: 25%;
+
+    ul {
+      .mobile_menu_close-svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 }

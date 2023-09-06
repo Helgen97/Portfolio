@@ -35,24 +35,26 @@ export const MAIN_SECTION_CONTENT = {
 }
 
 export const ABOUT_SECTION_CONTENT = [
-    "Hi, everyone!",
-    "My name is Dmytro and I’m looking for a job opportunity.",
-    "First of all, I’m Full-stack Developer. Main programming language is Java. For Front-end tasks I use React.js library.",
-    "My working and studying experience includes: Two commercial projects, finished courses in ProfITSoft Internship and ProgAcademy school."
+    "Hi, Everyone!",
+    "My name is Dmytro and I'm someone who's genuinely interested in technology and always ready to learn new things. I'm a beginner in development with a few freelance projects under my belt.",
+    "My passion for coding has allowed me to work on various projects, such as corporate and business-card sites. I'm open to using new technologies and always try to find simple and effective solutions.",
+    "My skills include Java program language, SQL and Keyword databases, Spring Framework and React.js library. I'm also good at communicating and working in a team.",
+    "Outside of the IT world, I'm interested in playing on guitar, reading fictional and fantasy books.",
+    "I'm always up for new challenges and opportunities for growth in the field of information technology, and I'm ready to collaborate with talented colleagues and industry professionals."
 ]
 
 export const EXPERIENCE_SECTION_CONTENT = [
     {
-        id: 2,
+        id: 1,
         headers: [
             "Apr 2023 - Now",
             "Freelancer",
             "Freelance"
         ],
         content: [
-            "- Taking freelance orders for single page or multipage sites",
-            "- For now I have two finished projects",
-            "- Improving knowledge and skills"
+            "- Taking freelance orders for business-card or сorporate sites",
+            "- Improving knowledge and skills",
+            "- Get acquainted with new technologies and the latest trends in the IT industry"
         ]
     },
     {
@@ -186,7 +188,7 @@ export const PROJECT_SECTION_CONTENT = [
     },
     {
         projectTitle: "Ukrainian Greek Catholic Church Site",
-        projectDescription: "Commercial project for Ukrainian Greek Catholic Church community of Donetsk Exarchate.Project created as monolith application with template engine for generating pages.For some reason there is no live version of it, just source code and design file.",
+        projectDescription: "Commercial project for Ukrainian Greek Catholic Church community of Donetsk Exarchate. Project created as monolith application with template engine for generating pages. For some reason there is no live version of it, just source code and design file.",
         projectTechnologies: "Java/Spring, Thymeleaf, jQuery",
         liveLink: "",
         sourceCode: "https://github.com/Helgen97/ugcc-project",
@@ -194,7 +196,7 @@ export const PROJECT_SECTION_CONTENT = [
     },
     {
         projectTitle: "Nice-Forum",
-        projectDescription: "First full-stack project based on Spring Backend and React Backend. It is a forum engine where people can comunicate with each other, share there thoughts and ideas. Created for final exam of Prog.Academy cources. Need to reedit and improvements after all i have learned. Live version is not available.",
+        projectDescription: "First full-stack project based on Spring Backend and React Frontend. It is a forum engine where people can comunicate with each other, share there thoughts and ideas. Created for final exam of Prog.Academy cources. Need to reedit and improvements after all i have learned. Live version is not available.",
         projectTechnologies: "Java/Spring, React.js",
         liveLink: "",
         sourceCode: "https://github.com/Helgen97/Nice-Forum",

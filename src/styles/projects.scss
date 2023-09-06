@@ -66,7 +66,8 @@
     }
 
     .project-box {
-      margin-right: calc(8 * #{$gap});
+      width: 70%;
+      margin: 0 auto;
     }
   }
 }
@@ -79,10 +80,6 @@
 
     .content {
       grid-area: 1 / 1 / 2 / 9;
-    }
-
-    .project-box {
-      margin-right: calc(20 * #{$gap});
     }
   }
 }

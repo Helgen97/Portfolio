@@ -7,8 +7,13 @@
 
 .about_section {
 
+  .about_block {
+    width: 100%;
+  }
+
   .paragraph_block:not(:first-child) {
     margin-top: calc(2 * #{$gap});
+    line-height: 1.2rem;
   }
 }
 
@@ -29,6 +34,11 @@
 
     .base_grid_right_background {
       display: none;
+    }
+
+    .about_block {
+      width: 70%;
+      margin: 0 auto;
     }
   }
 }

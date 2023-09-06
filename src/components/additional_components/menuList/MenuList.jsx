@@ -1,9 +1,13 @@
+import MobileMenuCloseButton from "../mobileMenuCloseButton";
 import Link from "../scrollLink";
 import { MENU_ITEMS } from "../../../constants/content";
 
 const MenuList = ({ additionalClickEvent }) => {
   return (
     <ul>
+      <li>
+        <MobileMenuCloseButton onClickEvent={additionalClickEvent} />
+      </li>
       {MENU_ITEMS.map((item) => {
         return (
           <li key={item.linkId}>
