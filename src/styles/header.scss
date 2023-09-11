@@ -71,6 +71,11 @@ header {
   }
 }
 
+.mobile_menu_button-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 /** 
   Style for mobile menu.
 **/
@@ -79,15 +84,15 @@ header {
   height: 100%;
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   padding: 0.5rem 0;
   background-color: $block-background-color;
   text-align: center;
-  transition: right 0.4s linear;
+  transition: left 0.4s linear;
 
   &.showed {
     //With this class it rolled to screen
-    right: 0;
+    left: 0;
   }
 
   ul {
@@ -120,6 +125,11 @@ header {
 
   .header_logo {
     font-size: 1.3rem;
+  }
+
+  .mobile_menu_button-svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .mobile_menu_content {

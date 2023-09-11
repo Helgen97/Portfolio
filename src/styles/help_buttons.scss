@@ -1,0 +1,15 @@
+.help_buttons {
+    position: relative;
+    opacity: 0;
+    transition: opacity .4s linear;
+}
+
+.help_buttons.showed {
+    opacity: 1;
+}
+
+.toTopButton_container {
+    position: fixed;
+    left: $gap;
+    bottom: $gap;
+}

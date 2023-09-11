@@ -4,10 +4,10 @@ import MobileMenu from "../../additional_components/mobileMenu/MobileMenu";
 
 const Header = () => {
   return (
-    <header>
+    <header id="top">
+      <MobileMenu />
       <HeaderLogo />
       <DesktopMenu />
-      <MobileMenu />
     </header>
   );
 };
