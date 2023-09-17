@@ -2,7 +2,11 @@ import CloseButtonSvg from "../../svg/closeButtonSvg";
 
 const MobileMenuCloseButton = ({ onClickEvent }) => {
   return (
-    <button onClick={onClickEvent} alt="Close mobile menu button">
+    <button
+      onClick={onClickEvent}
+      alt="Close mobile menu button"
+      title="Close mobile menu button"
+    >
       <CloseButtonSvg />
     </button>
   );

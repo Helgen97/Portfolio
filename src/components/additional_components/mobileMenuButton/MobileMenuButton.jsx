@@ -6,6 +6,7 @@ const MobileMenuButton = ({ onClick }) => {
       onClick={onClick}
       className="mobile_menu_button"
       alt="Open menu button"
+      title="Open mobile menu button"
     >
       <MenuButtonSvg />
     </button>
