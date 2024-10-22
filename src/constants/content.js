@@ -179,7 +179,15 @@ export const SKILL_SECTION_CONTENT = [
 
 export const PROJECT_SECTION_CONTENT = [
     {
-        projectTitle: "Filosof Barbershop landing Site",
+        projectTitle: "Olena Bulakh Make Up School (2024)",
+        projectDescription: "Commercial project for client who owns a make up school in Kyiv. Project created as a React application with Java Backend Application that hosted at VDS with connected to it domain. For now it working fine. You can check it by link below.",
+        projectTechnologies: "React.js(Router, Redux), Java(Spring Boot, Spring Security, Spring Data)",
+        liveLink: "https://www.olena-bulakh-school.kiev.ua",
+        sourceCode: "https://github.com/Helgen97/make_up_school",
+        figmaLink: "https://www.figma.com/design/hSYyJf28w54TVnLDIhEMXq/Olena-Bulakh-Make-Up-School?node-id=0-1&t=llsxg2kR3KxcWq8E-1"
+    },
+    {
+        projectTitle: "Filosof Barbershop Landing Site (2023)",
         projectDescription: "Commercial project for friend who owns a barbershops in Kyiv. Project created as single page React application that hosted at GitHub pages with connected to it domain. For now it working fine. You can check it by link below.",
         projectTechnologies: "React.js",
         liveLink: "https://www.filosof.in.ua",
