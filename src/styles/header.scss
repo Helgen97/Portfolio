@@ -7,7 +7,7 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: calc(2.5 * #{$gap}) calc(4 * #{$gap}); // Calculates paddings like other page with grids
   background-color: $block-background-color;
@@ -147,6 +147,10 @@ header {
 @media screen and (min-width: $desktop) {
   header {
     padding: calc(2.5 * #{$gap}) calc(20 * #{$gap});
+  }
+
+  .mobile_menu-close_button {
+    display: none;
   }
 
   .menu {

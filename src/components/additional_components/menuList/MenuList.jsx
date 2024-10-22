@@ -5,7 +5,7 @@ import { MENU_ITEMS } from "../../../constants/content";
 const MenuList = ({ additionalClickEvent }) => {
   return (
     <ul>
-      <li>
+      <li className="mobile_menu-close_button">
         <MobileMenuCloseButton onClickEvent={additionalClickEvent} />
       </li>
       {MENU_ITEMS.map((item) => {

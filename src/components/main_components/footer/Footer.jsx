@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer_logo">&copy; 2023 Dmytro Donchenko</div>
+      <div className="footer_logo">&copy; ${new Date().getFullYear().toString()} Dmytro Donchenko</div>
     </footer>
   );
 };
