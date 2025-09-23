@@ -1,1 +1,1 @@
-export { default } from "./MobileMenuCloseButton"
+export { default } from "./MobileMenuCloseButton";

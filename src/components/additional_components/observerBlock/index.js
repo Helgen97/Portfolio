@@ -1,1 +1,1 @@
-export { default } from "./ObserverBlock"
+export { default } from "./ObserverBlock";

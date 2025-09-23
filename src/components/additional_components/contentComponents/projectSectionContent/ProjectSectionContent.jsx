@@ -1,9 +1,15 @@
+import { memo } from "react";
 import { PROJECT_SECTION_CONTENT } from "../../../../constants/content";
 import ProjectBlock from "../../projectBlock/ProjectBlock";
 
+/**
+ * A React component that renders the projects section content.
+ * Maps project data to ProjectBlock components.
+ * @returns {JSX.Element} The projects section content
+ */
 const ProjectSectionContent = () => {
   return (
-    <div className="content">
+    <div className="content" role="region" aria-label="Projects section">
       {PROJECT_SECTION_CONTENT.map((project) => (
         <ProjectBlock
           key={project.projectTitle}
@@ -19,4 +25,4 @@ const ProjectSectionContent = () => {
   );
 };
 
-export default ProjectSectionContent;
+export default memo(ProjectSectionContent);

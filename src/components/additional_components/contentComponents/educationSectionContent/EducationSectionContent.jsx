@@ -1,9 +1,15 @@
+import { memo } from "react";
 import { EDUCATION_SECTION_CONTENT } from "../../../../constants/content";
 import EducationBlock from "../../educationBlock/EducationBlock";
 
+/**
+ * A React component that renders the education section content.
+ * Maps education data to EducationBlock components.
+ * @returns {JSX.Element} The education section content
+ */
 const EducationSectionContent = () => {
   return (
-    <div className="content">
+    <div className="content" role="region" aria-label="Education section">
       {EDUCATION_SECTION_CONTENT.map((blockContent) => (
         <EducationBlock
           key={blockContent.id}
@@ -17,4 +23,4 @@ const EducationSectionContent = () => {
   );
 };
 
-export default EducationSectionContent;
+export default memo(EducationSectionContent);

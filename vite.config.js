@@ -1,8 +1,133 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+/**
+ * Vite configuration for the Dmytro Donchenko Portfolio SPA.
+ * @module vite.config
+ */
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
 
-// https://vitejs.dev/config/
+/**
+ * Vite configuration object.
+ */
 export default defineConfig({
+  // Base path for the application, used for deployment
   base: "/",
-  plugins: [react()],
-})
+
+  // Plugins for enhancing the build process
+  plugins: [
+    // React plugin for JSX/TSX support and fast refresh
+    react(),
+    // PWA plugin for offline support and app-like experience
+    VitePWA({
+      registerType: "autoUpdate",
+      // Include assets from src/images and src/fonts
+      includeAssets: ["images/me.jpg"],
+      // Workbox configuration for service worker
+      workbox: {
+        // Cache Google Fonts
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "google-fonts-stylesheets",
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "google-fonts-webfonts",
+              expiration: {
+                maxEntries: 20,
+                maxAgeSeconds: 60 * 60 * 24 * 365, // 1 year
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+          // Cache local images
+          {
+            urlPattern: /.*\.(?:png|jpg|jpeg|svg)$/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "images",
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
+      },
+      manifest: {
+        name: "Dmytro Donchenko Portfolio",
+        short_name: "Donchenko Portfolio",
+        description:
+          "Portfolio of Dmytro Donchenko, a Full-stack developer specializing in Java and React.",
+        theme_color: "#ffffff",
+        background_color: "#ffffff",
+        display: "standalone",
+        start_url: "/",
+        icons: [
+          {
+            src: "/favicon/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/favicon/android-chrome-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "/favicon/apple-touch-icon.png",
+            sizes: "180x180",
+            type: "image/png",
+          },
+          {
+            src: "/favicon/favicon-32x32.png",
+            sizes: "32x32",
+            type: "image/png",
+          },
+          {
+            src: "/favicon/favicon-16x16.png",
+            sizes: "16x16",
+            type: "image/png",
+          },
+          {
+            src: "/favicon/mstile-150x150.png",
+            sizes: "150x150",
+            type: "image/png",
+          },
+          {
+            src: "/favicon/safari-pinned-tab.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+          },
+        ],
+      },
+    }),
+  ],
+
+  // Build optimizations for production
+  build: {
+    // Minify output for smaller bundle size
+    minify: "esbuild",
+    // Generate source maps for debugging
+    sourcemap: true,
+    // Optimize assets (e.g., images)
+    assetsInlineLimit: 4096,
+  },
+});
