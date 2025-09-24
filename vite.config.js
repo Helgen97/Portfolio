@@ -12,7 +12,7 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
   // Base path for the application, used for deployment
   base: "/",
-
+  assetsInclude: ["**/*.pdf"],
   // Plugins for enhancing the build process
   plugins: [
     // React plugin for JSX/TSX support and fast refresh
@@ -24,6 +24,7 @@ export default defineConfig({
       includeAssets: ["images/me.jpg"],
       // Workbox configuration for service worker
       workbox: {
+        navigateFallbackDenylist: [/\.pdf$/],
         // Cache Google Fonts
         runtimeCaching: [
           {
