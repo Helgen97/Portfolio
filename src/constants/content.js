@@ -143,7 +143,6 @@ export const MAIN_SECTION_CONTENT = {
   mainHeaderText: "Dmytro Donchenko",
   imageLink: photo,
   additionalHeaderText: "Fullstack Developer",
-  cvLink: "/files/cv.pdf",
 };
 
 // ABOUT_SECTION_CONTENT: Paragraphs for the About section

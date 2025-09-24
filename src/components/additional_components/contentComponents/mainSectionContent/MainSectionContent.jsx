@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { MAIN_SECTION_CONTENT } from "../../../../constants/content";
+import CV from "../../../../files/cv.pdf";
 
 /**
  * A React component that renders the content of the main hero section of the portfolio website.
@@ -28,7 +29,7 @@ const MainSectionContent = () => {
       <div className="download-btn-container">
         <a
           className="download-btn"
-          href={MAIN_SECTION_CONTENT.cvLink}
+          href={CV}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download Dmytro Donchenko's CV (opens in new tab)"
