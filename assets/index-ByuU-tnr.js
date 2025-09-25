@@ -1,2 +1,1 @@
 import{r as t,j as o,A as n}from"./index-C2D-4sXj.js";const r=()=>o.jsx("div",{className:"about_block",role:"article","aria-label":"About me content",children:n.map((e,a)=>o.jsx("p",{className:"paragraph_block",children:e},a))}),s=t.memo(r),c=()=>o.jsx("div",{className:"content",role:"region","aria-label":"About section",children:o.jsx(s,{})}),i=t.memo(c);export{i as default};
-//# sourceMappingURL=index-ByuU-tnr.js.map
